@@ -67,7 +67,20 @@ Grid Layout
 
 .grid {
     display: grid;
-    
+    grid-template: 1fr / repeat( 4, 1fr );
+}
+
+/*
+===========================================
+Card layout
+===========================================
+*/
+
+.card{
+    width: 250px;
+    background-color: white;
+    color: black;
+    height: fit-content;
 }
 
 
@@ -79,7 +92,7 @@ Custom styles
 
 body {
 
-    background-color:rgb(27, 27, 27);
+    background-color:#1f1f1f;
     color: white;
 
 }
@@ -87,7 +100,7 @@ body {
 a {
     text-decoration: none;
     color:gold;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 }
 
 /*
@@ -97,30 +110,22 @@ Custom styles
 */
 
 header {
-    height: 300px;
+    height: 250px;
     text-align: center;
 }
 
 header h1{
-    padding: 100px;
+    padding: 60px;
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-evenly;
     border-bottom: 3px groove rgb(54, 52, 52);
     border-top: 3px groove rgb(54, 52, 52);
+    text-align: center;
 }
 
 .primary-nav ul li{
-    flex-grow: 1;
-    padding: 20px 10px;
-    align-content: center;
+    display: inline-block;
+    padding: 20px 3%;
     font-family: 'Merriweather', serif;
-    border-left: 3px groove rgb(54, 52, 52);
-    
-}
-
-.primary-nav ul li:first-child{
-    border: none;
 }
