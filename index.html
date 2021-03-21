@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web development Cheatsheet</title>
+    <title>Frontend Designer's Cheatsheet</title>
     
     <!--Google fonts link-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,102 +14,38 @@
     &family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     
     <!--Stylesheet links-->
-    <link rel="stylesheet" href="./assets/reset.css" type="text/css">
-    <link rel="stylesheet" href="./assets/styles.css" type="text/css">
-    
+    <link rel="stylesheet" href="./assets/stylesheets/reset.css" type="text/css">
+    <link rel="stylesheet" href="./assets/stylesheets/styles.css" type="text/css">
 </head>
 <body>
     <header class="container">
-        <h1>Web development Cheatsheet </h1>
-        <nav class="primary-nav">
-            <ul>
-                <li><a href = "#">HTML</a></li>
-                <li><a href = "#">CSS</a></li>
-                <li><a href = "#">Javascript</a></li>
-                <li><a href = "#">Design Concepts</a></li>
-                <li><a href = "#">Version Control</a></li>
-            </ul>
-        </nav>
+        
+        <div class="nav-menu">
+            <img src="./assets/images/menuIcon.png" class="menu-icon" onclick="openMenu()">
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href = "#">HTML</a></li>
+                    <li><a href = "#">CSS</a></li>
+                    <li><a href = "#">Javascript</a></li>
+                    <li><a href = "#">Design Concepts</a></li>
+                    <li><a href = "#">Version Control</a></li>
+                </ul>
+                <img src="./assets/images/closeIcon.png" class="close-icon" onclick="closeMenu()">
+            </nav>
+        </div>
+        
+        <div class="header-text">
+            <h1>Frontend Designer's Cheatsheet </h1>
+            <form>
+                <input type="text" id ="search" name="search" placeholder="search">
+                <button type = "submit"><img src="./assets/images/searchIcon.png"></button>
+            </form>
+        </div>
+        
+        
     </header>
-    
-    <div class="container">
-        <section class="container">
-            <h2>HTML5</h2>
-            
-            <article class="card">
-                <h3>Structurally based elements</h3>
-                <div class="date">
-                    <span class="day">25</span>
-                    <span class="month">Feb</span>
-                    <span class="year">2021</span>
-                </div>
-                <p class="article-overview">
-                    They are all block elements intended to give 
-                    meaning to the organization of our pages and 
-                    improve our structural semantics..
-                </p>
-                <button class="read-more-button">Read More</button>
-            </article>
-            
-        </section>
-        
-        <section>
-            <h2>CSS3</h2>
-            
-            <article class="card">
-                <h3>CSS grids</h3>
-                <div class="date">
-                    <span class="day">25</span>
-                    <span class="month">Feb</span>
-                    <span class="year">2021</span>
-                </div>
-                <p class="article-overview">
-                    It is a two dimensional layout system which helps
-                    to easily define the layout of a webpage..
-                </p>
-                <button class="read-more-button">Read More</button>
-            </article>
-            
-        </section>
-        
-        <section>
-            <h2>Javascript</h2>
-            
-            <article class="card">
-                <h3>Functions</h3>
-                <div class="date">
-                    <span class="day">25</span>
-                    <span class="month">Feb</span>
-                    <span class="year">2021</span>
-                </div>
-                <p class="article-overview">
-                    A block of statements that perform a specific task..
-                </p>
-                <button class="read-more-button">Read More</button>
-            </article>
-            
-        </section>
-        
-        <section>
-            <h2>Version Control</h2>
-            
-            <article class="card">
-                <h3>Setting up Git</h3>
-                <div class="date">
-                    <span class="day">25</span>
-                    <span class="month">Feb</span>
-                    <span class="year">2021</span>
-                </div>
-                <p class="article-overview">
-                    Git is a software that allows you to keep
-                    track of changes made to a project over time..
-                </p>
-                <button class="read-more-button">Read More</button>
-            </article>
-            
-        </section>
-        
-    </div>
-    
+
+    <!--Script links-->
+    <script src="./assets/scripts/events.js"></script>
 </body>
 </html>

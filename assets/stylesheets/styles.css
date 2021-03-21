@@ -65,24 +65,6 @@ Grid Layout
     margin: 0 auto;
 }
 
-.grid {
-    display: grid;
-    grid-template: 1fr / repeat( 4, 1fr );
-}
-
-/*
-===========================================
-Card layout
-===========================================
-*/
-
-.card{
-    width: 250px;
-    background-color: white;
-    color: black;
-    height: fit-content;
-}
-
 
 /*
 ===========================================
@@ -105,27 +87,96 @@ a {
 
 /*
 ===========================================
-Custom styles
+Header
 ===========================================
 */
 
-header {
-    height: 250px;
+header{
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
-header h1{
-    padding: 60px;
-}
 
-nav ul {
-    border-bottom: 3px groove rgb(54, 52, 52);
-    border-top: 3px groove rgb(54, 52, 52);
+/*
+===========================================
+Primary Navigation- Full size menu
+===========================================
+*/
+
+#primary-nav{
+
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: -100vh;
+    left:0;
+    z-index: 2;
+    background-color: #1f1f1f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+
+    transition: 1s;
+    
 }
 
-.primary-nav ul li{
-    display: inline-block;
-    padding: 20px 3%;
-    font-family: 'Merriweather', serif;
+#primary-nav ul li{
+    margin: 35px 0;
 }
+
+#primary-nav ul a{
+    font-size: 2rem;
+    color: white;
+    padding: 5px;
+    letter-spacing: 1.2px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#primary-nav ul a::after{
+    content: '';
+    height: 2.5px;
+    width: 0;
+    background-color: rgba(255, 217, 0, 0.6);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: width 0.25s;
+}
+
+#primary-nav ul a:hover::after{
+    width: 100%;
+}
+
+#primary-nav ul a:hover{
+    color: gold;
+}
+
+.close-icon{
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 28px;
+    cursor: pointer;
+}
+
+.menu-icon{
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    cursor: pointer;
+}
+
+
+
+
