@@ -46,6 +46,10 @@ h6 {
     font-size: 0.75rem;
 }
 
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
 /*
 ===========================================
 Grid Layout
@@ -72,11 +76,19 @@ Custom styles
 ===========================================
 */
 
-body {
+body{
+    width: 100vw;
+    height: 100vh;
+}
 
-    background-color:#1f1f1f;
-    color: white;
-
+.bg-image {
+    background-image: url("../images/bgMain.png");
+    background-color: rgb(10, 10, 10);
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 a {
@@ -85,23 +97,67 @@ a {
     font-size: 1.1rem;
 }
 
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 /*
 ===========================================
 Header
 ===========================================
 */
 
-header{
-    width: 100vw;
-    height: 100vh;
-}
-
 .header-text{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    top: 40%;
+    left: 10%;
+}
+
+.header-text h1{
+    color: #f1f1f1;
+    font-size: 3rem;
+    letter-spacing: 1.1px;
+}
+
+.header-text .small{
+    font-size: 2.5rem;
+    color:  #ffcf4aff;
+    padding: 20px 0;
+}
+
+.search-container{
+    margin: 15px 0;
+    padding: 5px;
+    cursor: pointer;
+    height: 60px;
+}
+
+.search-icon{
+    position: absolute;
+    width: 28px;
+    line-height: 60px;
+    margin: 10px;
+}
+
+#search-input{
+    padding-left: 40px;
+    height: 100%;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 50px;
+    width: 70%;
+    font-size: 1rem;
+    color:#1f1f1f;
+}
+
+#search-input::placeholder{
+    color:rgb(10, 10, 10);
+}
+
+#search-input:focus{
+    outline: none;
 }
 
 
@@ -115,16 +171,12 @@ Primary Navigation- Full size menu
 
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: -100vh;
     left:0;
     z-index: 2;
-    background-color: #1f1f1f;
+    background-color: rgb(10, 10, 10);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 
     transition: 1s;
     
@@ -177,6 +229,121 @@ Primary Navigation- Full size menu
     cursor: pointer;
 }
 
+/*
+===========================================
+Posts page - side nav
+===========================================
+*/
+
+.side-nav {
+    height: 100%;
+    width: 280px;
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.side-nav .back-icon {
+
+    margin: 40px 0 0 30px;
+    width: fit-content;
+
+}
+
+.back-icon img{
+    width: 22px;
+}
+
+.nav-list{
+
+    flex-direction: column;
+    margin: 100px 0;
+
+}
 
 
+.nav-list a{
 
+    padding:  10px 5px;
+    margin: 10px 0;
+
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.nav-list a:hover{
+
+    color: gold;
+
+}
+
+
+.main-wrapper {
+
+    height: 100vh;
+    background-color: #292929;
+    margin-left: 280px;
+    padding: 30px;
+    
+}
+
+.cards-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+.vertical-card {
+
+    width: 280px;
+    height: 300px;
+    text-align: left;
+    margin: 20px auto;
+    padding: 0 15px 15px 15px;
+}
+
+.vertical-card h2{
+    color: white;
+    height: 150px;
+    padding-top: 50px;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
+.vertical-card p{
+    font-size: 1.1rem;
+    line-height: 1.2;
+    letter-spacing: 0.8px;
+    color: #1f1f1f;
+}
+
+.red-card{
+    background-color: rgb(216, 83, 59);
+}
+
+.green-card{
+    background-color: rgb(133, 180, 37);
+}
+
+.blue-card{
+    background-color: rgb(13, 163, 201);
+}
+
+.yellow-card{
+    background-color: rgb(255, 187, 0);
+}
+
+/*
+===========================================
+Article page
+===========================================
+*/
+
+iframe {
+    width: 50%;
+}

@@ -3,7 +3,7 @@ let primaryNav = document.getElementById("primary-nav");
 
 function closeMenu(){
 
-    primaryNav.style.top = "-100vw";
+    primaryNav.style.top = "-100vh";
 
 }
 
