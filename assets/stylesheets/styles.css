@@ -65,9 +65,10 @@ Grid Layout
 }
 
 .container {
-    width: 100vw;
+    width: 80vw;
     margin: 0 auto;
 }
+
 
 
 /*
@@ -102,6 +103,14 @@ nav{
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+th, td{
+    border: 1px solid yellow;
+    border-collapse: collapse;
+    color: white;
+    padding: 10px;
+    font-size:1.2rem;
 }
 /*
 ===========================================
@@ -282,7 +291,7 @@ Posts page - side nav
 
 .main-wrapper {
 
-    height: 100vh;
+    height: auto;
     background-color: #292929;
     margin-left: 280px;
     padding: 30px;
@@ -344,6 +353,22 @@ Article page
 ===========================================
 */
 
-iframe {
-    width: 50%;
+table caption {
+    font-size: 2rem;
+    color: white;
+    margin: 25px 15px;
+    text-transform: uppercase;
+}
+
+    
+td:nth-child(1) {
+    font-family: 'Inconsolata', monospace;
+    width: 30%;
+}
+
+th{
+    background-color: rgb(0, 162, 255);
+    color:black;
+    text-transform: uppercase;
+
 }

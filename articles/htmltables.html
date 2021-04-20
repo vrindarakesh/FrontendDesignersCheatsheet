@@ -5,23 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Cheatsheet | Tables </title>
-
-      <!--Google fonts link-->
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&
-      family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700
-      &family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-      
-      <!--Stylesheet links-->
-      <link rel="stylesheet" href="./assets/stylesheets/reset.css" type="text/css">
-      <link rel="stylesheet" href="./assets/stylesheets/styles.css" type="text/css">
-
+    
+    <!--Google fonts link-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&
+    family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700
+    &family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!--Stylesheet links-->
+    <link rel="stylesheet" href="../assets/stylesheets/reset.css" type="text/css">
+    <link rel="stylesheet" href="../assets/stylesheets/styles.css" type="text/css">
+    
 </head>
 <body>
+    
+    <aside class="side-nav">
+        
+        <!--   <div class="side-nav-bg">
+            <img src="./assets/images/bgflower.png">
+        </div> -->
+        
+        <div class="back-icon">
+            <a href="../index.html"><img src="../assets/images/backIcon.png" alt="back arrow"></a>
+        </div>
+        
+        <nav class="nav-list">
+            <a href = "#">HTML</a>
+            <a href = "#">CSS</a>
+            <a href = "#">Javascript</a>
+            <a href = "#">Design Concepts</a>
+            <a href = "#">Version Control</a>
+        </nav>
+        
+    </aside>
+    
+    <div class="main-wrapper">
+      
+        <table>
+            <caption>Table Elements and Attributes</caption>
+            <colgroup>
+                <col>
+                <col>
+            </colgroup>
+            
+            <thead>
+                <tr>
+                    <th id = "table-tag-column" scope="col">Tag/Attribute</th>
+                    <th id = "table-description-column" scope="col">Description</th>
+                </tr>
+            </thead>
+            
+            <!--Basic elements-->
+            <tr>
+                <th colspan="2" scope="colgroup">Basic Elements</th>
+            </tr>
+            <tr>
+                <td headers="table-tag-column">&lt;table&gt;</td>
+                <td>To enclose table content</td>
+            </tr>
+            <tr>
+                <td>&lt;td&gt;</td>
+                <td>Table data - to hold table cell data</td>
+            </tr>
+            <tr>
+                <td>&lt;tr&gt;</td>
+                <td>Table row - &lt;td&gt; elements of one row should be wrapped inside &lt;tr&gt; </td>
+            </tr>
+            <tr>
+                <td>&lt;th&gt;</td>
+                <td>Table header - defines type of data row/column contains</td>
+            </tr> 
+            
+            <!--Attributes-->
+            <tr>
+                <th colspan="2" scope="colgroup">Table Attributes</th>
+            </tr>
+            <tr>
+                <td>colspan = "span"</td>
+                <td>span = No. of columns a cell spans</td>
+            </tr>
+            <tr>
+                <td>rowspan = "span"</td>
+                <td>span = No. of rows a cell spans</td>
+            </tr>
+            <tr>
+                <td>scope = "col|row|colgroup|rowgroup"</td>
+                <td>Used for headings(th elements) to specify to which cells 'th' are headers for - row or column or multiple rows or columns</td>
+            </tr>
+            <tr>
+                <td>id and headers</td>
+                <td>Specify id attribute for every &lt;th&gt; element and headers attribute to each td elements to 
+                    contain ids of all the &lt;th&gt; elements that acts as headings for that &lt;td&gt; element </td>
+            </tr>
+                
+            <!--Styling elements-->
+            <tr>
+                <th colspan="2" scope="colgroup">Table styling elements</th>
+            </tr>
+            <tr>
+                <td>&lt;colgroup&gt; and &lt;col&gt;</td>
+                <td>to style columns, provide style information for each column inside &lt;col&gt; . Blank &lt;col&gt; means no styling.
+                        Same styling for multiple column is specified by span. </td>
+            </tr>
+                    
+            <!--Semantic elements-->
+            <tr>
+                <th colspan="2" scope="colgroup">Table Semantic elements</th>
+            </tr>
+            <tr>
+                <td>&lt;caption&gt;</td>
+                <td>To add caption to the table</td>
+            </tr>
+            <tr>
+                <td>&lt;thead&gt;</td>
+                <td>Wraps the heading section of the table</td>
+            </tr>
+            <tr>
+                <td>&lt;tbody&gt;</td>
+                <td>Wraps the body section of the table</td>
+            </tr>
+            <tr>
+                <td>&lt;tfoot&gt;</td>
+                <td>Wraps the footer section of the table. These elements are only 
+                    useful when it comes to styling and doesnt add any accessibility or visual features.</td>
+            </tr>
+                        
+        </table>
 
-    <iframe src="https://codepen.io/vrindarakesh/embed/GRrMrwm?default-tab=html&amp;line-numbers=true&amp;height=500" width = 50% height="500px">
-
-    </iframe>
-
+        <p class="codepen" data-height="346" data-theme-id="dark" data-default-tab="html,result" data-user="vrindarakesh" data-slug-hash="GRrMrwm" style="height: 346px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML tables ">
+            <span>See the Pen <a href="https://codepen.io/vrindarakesh/pen/GRrMrwm">
+            HTML tables </a> by Vrinda Menon (<a href="https://codepen.io/vrindarakesh">@vrindarakesh</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                    
+    </div>
+                   
 </body>
 </html>
